@@ -4,7 +4,7 @@ include('conexao.php');
 if(!empty($_GET['cod'])){
     $codigo = $_GET ['cod'];
     $sql = "Select * from usuarios where cod = $codigo";
-    $res = conn -> query($sql);
+    $res = $conn -> query($sql);
 
    if($res == true) {
         while($row = mysqli_fetch_assoc($res)){
@@ -39,27 +39,27 @@ if(!empty($_GET['cod'])){
 <form class="row g-3" action="update.php" method="post">
   <div class="col-12">
     <label for="inputNome" class="form-label">Nome</label>
-    <input type="text" class="form-control" id="inputNome" name="<?php echo $nome?>">
+    <input type="text" class="form-control" id="inputNome" name ="nome" value="<?php echo $nome?>">
   </div>
 
 
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail" name="<?php echo $email?>">
+    <input type="email" class="form-control" id="inputEmail" name ="email" value="<?php echo $email?>">
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword" name="<?php echo $senha?>">
+    <label for="inputPassword4" class="form-label">Senha</label>
+    <input type="password" class="form-control" id="inputPassword" name ="senha" value="<?php echo $senha?>">
   </div>
   
   
   <div class="col-md-2">
     <label for="inputZip" class="form-label">Data Cadastro</label>
-    <input type="date" class="form-control" id="inputZip" name="<?php echo $data_cadastro?>">
+    <input type="date" class="form-control" id="inputZip" name ="data_cadastro" value="<?php echo $data_cadastro?>">
   </div>
 
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Atualizar</button>
+    <button type="submit" class="btn btn-primary" >Atualizar</button>
     <input type="hidden" name="cod" value = "<?php echo $codigo ?>">
   </div>
 </form>

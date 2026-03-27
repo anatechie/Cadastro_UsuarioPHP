@@ -45,13 +45,13 @@ if($qtd > 0){
         print"<td>".$row->email."</td>";
         print"<td>".$row->senha."</td>";
         print"<td>".$row->data_cadastro."</td>";
-        print'<td>  <button class = "btn btn-primary"> Editar </button>
-              <button class = "btn btn-danger"> Excluir </button></td>';
+        print"<td>  <button class = 'btn btn-primary' onclick = location.href='atualizar.php?cod=$row->cod'> Editar </button>
+              <button class = 'btn btn-danger'> Excluir </button></td>";
 
-        print"</tr>";
+        print'</tr>';
 
     }
-    print "</table>";
+    print '</table>';
 }else{
    // print("<p class = 'alert alert-danger'> Não foram encontrado resultados!</p>");
     print("<p> Não foram encontrado resultados!</p>");
