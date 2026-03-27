@@ -8,6 +8,6 @@ if(isset($_POST['cod'])){
     $senha = $_POST['senha'];
     $data_cadastro = $_POST['data_cadastro'];
 
-    $sql = "update usuarios set nome = '$nome', senha ='$senha', data_cadastro = '$data_cadastro'";
-
+    $sql = "update usuarios set nome = '$nome', senha ='$senha', data_cadastro = '$data_cadastro' where cod =$codigo";
+    $res = $conn -> query($sql);
 }
