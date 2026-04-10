@@ -36,9 +36,9 @@
                     print'<td>'.$row->email.'</td>';
                     print'<td>'.$row->senha.'</td>';
                     print'<td>'.$row->data_cadastro.'</td>';
-                    print '<td>
-                    <button onclick=location.href="atualizar.php?cod='.$row->cod.'" class="btn btn-primary">Editar</button>
-                    <button onclick=location.href="deletar.php?cod='.$row->cod.'" class="btn btn-danger">Excluir</button></td>';
+                    print "<td>
+                    <button onclick=location.href='atualizar.php?cod='.$row->cod' class='btn btn-primary'>Editar</button>
+                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='deletar.php?cod=$row->cod'}\" class='btn btn-danger'>Excluir</button></td>";
                     print '</tr>';
                 }
                 print'</table>';
