@@ -15,6 +15,8 @@
 
             print('<h2> Lista de Usuarios</h2>');
             print('<br><br><hr>');
+            print("<a href='insert.html'><button class='btn btn-primary'> Novo Cadastro</button></a>");
+            print('<br><br><hr>');
             $sql = 'select * from usuarios';
             $res = $conn->query($sql);
             $qtde = $res->num_rows;
